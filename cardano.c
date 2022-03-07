@@ -2,6 +2,13 @@
 #include<math.h>
 #include<stdlib.h>
 
+/*
+MÉTODO PROPORCIONADO POR:
+Gutiérrez Olvera, Lorena. (2016). "Métodos numéricos para resolver ecuaciones y problemas de optimización no lineales". (Tesis de Licenciatura). 
+Universidad Nacional Autónoma de México, México. Recuperado de https://repositorio.unam.mx/contenidos/165243
+Página 40
+*/
+
 #define RCub(X) (pow(X,0.333333333333333333333333333333333333))
 #define Cub(X) ((X)*(X)*(X))
 #define SQR(X) ((X)*(X))
@@ -9,6 +16,8 @@
  
 int main(int argc, char *argv[]){
     double a,b,c,D,G,H;
+    // NAME  X3 X2 X1 X0
+    //  0    1  2  3  4
     if(argc !=5){
         perror("Error de argumentos.");
         return -1;
@@ -17,7 +26,7 @@ int main(int argc, char *argv[]){
         a=atof(argv[2])/atof(argv[1]); b=atof(argv[3])/atof(argv[1]); c=atof(argv[4])/atof(argv[1]); }
     else{
         a=atof(argv[2]); b=atof(argv[3]); c=atof(argv[4]); }
-
+    //
     H=0.3333333333*b - 0.1111111111*SQR(a);
     G =0.1666666667*a*b - 0.5*c - 0.03703703704*Cub(a); 
     D=SQR(G) + Cub(H);
