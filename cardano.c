@@ -26,7 +26,7 @@ int main(int argc, char *argv[]){
         a=atof(argv[2])/atof(argv[1]); b=atof(argv[3])/atof(argv[1]); c=atof(argv[4])/atof(argv[1]); }
     else{
         a=atof(argv[2]); b=atof(argv[3]); c=atof(argv[4]); }
-    //
+    //Discriminante 
     H=0.3333333333*b - 0.1111111111*SQR(a);
     G =0.1666666667*a*b - 0.5*c - 0.03703703704*Cub(a); 
     D=SQR(G) + Cub(H);
